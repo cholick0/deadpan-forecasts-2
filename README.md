@@ -9,3 +9,7 @@ One absurd but believable deadpan weather line for an invented city, written by 
 > Blorvenholm: highs of 41°, with a light shower of small, apologetic frogs until noon, clearing to a 90% chance of mild regret by evening.
 
 `main.ts` writes the forecast to `/output/entry.txt` (137 characters, one line, within the 1–160 character gate) and validates it, including a byte-level read-back check.
+
+## How it works
+
+`main()` runs three small steps in order: `validateEntry()` checks the line is 1–160 characters, non-blank, a single line, and free of control characters; `writeEntry()` creates `/output` and writes the forecast to `OUT_PATH`; `verifyReadBack()` reads the file back byte-for-byte so what the grader reads is exactly what was written. If any step fails, the program throws before printing anything.
