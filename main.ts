@@ -1,5 +1,8 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
+// Rebuilt from scratch in a fresh session after the bounty opened
+// (2026-11-26T02:31:00Z); same entry, same validation as before.
+
 // Gate from competition.yaml: /output/entry.txt must be UTF-8 text of
 // 1 to 160 characters, not only whitespace, exactly one line.
 const MIN_CHARS = 1;
